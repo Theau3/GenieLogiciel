@@ -66,14 +66,84 @@ img{
     object-fit: cover;
 }
 
-h1{
+.class_h1{
     font-weight: 800;
-    font-size: 1.8rem;
+    font-size: 2em;
+    margin-right: 5em;
+    color:#1B9C85;
+    position: absolute; 
+    top: 10%; left: 24%; 
+    transform: translate(-50%, -50%); 
 }
+.class_h2{
+    font-weight: 800;
+    font-size: 2rem;
+    margin-right: 10em;
+    color:#1B9C85;
+    position: absolute;
+    top: 10%; left: 30%; 
+    transform: translate(-50%, -50%); 
+}
+.txt_contact{
+    margin-top: 8em;
+    margin-bottom: 8em;
+    
+}
+
+.new_contact{
+    font-size: 15px;
+    margin-top: 10em;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+._contact{
+    font-size: 15px;
+    margin-top: 10em;
+ 
+}
+
+
+.btn-btn-primary {
+    display: inline-block;
+    background-color: #1B9C85;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+.class_new_contact{
+    display: inline-block;
+    background-color: #1B9C85;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2em;
+    margin-right: 5em;
+    color:#1B9C85;
+    position: absolute; 
+    top: 10%; left: 50%; 
+    transform: translate(-50%, -50%); 
+
+}
+
 
 h2{
     font-weight: 600;
     font-size: 1.4rem;
+
 }
 
 h3{
