@@ -47,7 +47,7 @@ $conn = ConnectToDb();
 
                     };
                 ?>
-                <div class="sales"  onclick="javascript:window.location='http://localhost/GenieLogiciel/Frontend/pages/Sales.php';">
+                <div class="sales"  onclick="javascript:window.location='http://localhost/GenieLogiciel/Frontend/pages/Sales.php'">
                     <div class="status">
                         <div class="info">
                             <h3>Ventes totales dernier mois</h3>
@@ -65,7 +65,7 @@ $conn = ConnectToDb();
                     </div>
                 </div>
 
-                <div class="visits"  onclick="javascript:window.location='http://localhost/GenieLogiciel/Frontend/pages/Sales.php';">
+                <div class="visits"  onclick="javascript:window.location='http://localhost/GenieLogiciel/Frontend/pages/Sales.php'">
                     <div class="status">
                         <div class="info">
                             <h3>chiffre d'affaire dernier mois</h3> 
@@ -124,7 +124,7 @@ $conn = ConnectToDb();
             
             <!-- New Users Section -->
             
-            <div class="new-users">
+            <div class="new-users" onclick="javascript:window.location='http://localhost/GenieLogiciel/Frontend/pages/contacts.php'">
                 <h2>Contacts</h2>
                 <div class="user-list">
                 <?php    
@@ -159,10 +159,48 @@ $conn = ConnectToDb();
             <!-- End of New Users Section -->
 
             <!-- EdT -->
-            <div class="recent-orders">
+            <div class="edt-dashboard" onclick="javascript:window.location='http://localhost/GenieLogiciel/Frontend/pages/schedule.php'">
                 <h2>Emploi du temps pour la journée</h2>
+                <?php
+
+                $currentDate = date('Y-m-d');
+                $sql = "SELECT * FROM events WHERE Date='$currentDate' and TypeEvenement='Reunion'";
+                $req = $conn->query($sql);
+
+                if ($req->rowCount() > 0) 
+                {
+                    $r = 0;
+                    while (($row = $req->fetch(PDO::FETCH_ASSOC)) && $r < 5) 
+                    {
+                        $nomevent = $row["Nom"];
+                        $date = $row["Date"];
+                        $heure = $row["Heure"];
+                        $r = $r +1;
+                        echo "
+                        <div class='reminders' >
+                        <div class='header'>
+                        </div>
+                        <div class='notification deactive'>
+                            <div class='content'>
+                                <div class='info'>
+                                <h3>$nomevent</h3>
+                                <h4>$heure</h4>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>"
+
+                    ;
+                    }
+                }
+                ?>
+                <!--debut list-->
+
+
 
             </div>
+            
             <!-- End EdT -->
 
             <!-- Document -->
