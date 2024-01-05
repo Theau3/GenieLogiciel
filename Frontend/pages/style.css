@@ -341,12 +341,34 @@ main .new-users .user-list .user img{
 }
 
 main .recent-orders{
+
     margin-top: 1.3rem;
+    background-color: var(--color-danger);
 }
 
 main .recent-orders h2{
     margin-bottom: 0.8rem;
 }
+
+main .edt-dashboard h2{
+    margin-bottom: 2rem;
+}
+
+main .edt-dashboard .reminders{
+    display: flex;
+    align-items: center;
+    margin-left: 5.5em;
+
+}
+
+main .edt-dashboard .reminders .content .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    justify-content: center;
+}
+
 
 main table{
     background-color: var(--color-white);
@@ -851,5 +873,4 @@ td a{
     .right-section .nav button span{
         font-size: 2rem;
     }
-
 }
